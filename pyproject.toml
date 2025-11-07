@@ -1,0 +1,19 @@
+[project]
+name = "sbo-poc"
+version = "0.1.0"
+description = "PoC program for SBO (Single Batch Overlap) using DeepEP and DeepGEMM"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "setuptools>=70.2.0",
+    "torch",
+    "torchvision",
+]
+
+[[tool.uv.index]]
+url = "https://mirrors.aliyun.com/pypi/simple/"
+default = true
+
+[tool.uv.sources]
+torch = { url = "https://mirrors.aliyun.com/pytorch-wheels/cu126/torch-2.6.0%2Bcu126-cp310-cp310-manylinux_2_28_x86_64.whl" }
+torchvision = { url = "https://mirrors.aliyun.com/pytorch-wheels/cu126/torchvision-0.21.0%2Bcu126-cp310-cp310-linux_x86_64.whl" }
