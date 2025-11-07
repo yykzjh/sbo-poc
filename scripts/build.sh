@@ -30,7 +30,8 @@ popd # nvshmem
 
 # build deep_ep_sbo
 pushd deep_ep_sbo
-rm -rf dist
+rm -rf build dist
+rm -rf *.egg-info
 if ! grep -q "extra_link_args.extend(\['-lcudadevrt'\])" setup.py; then
     python3 << 'EOF'
 with open('setup.py', 'r') as f:
@@ -46,5 +47,13 @@ fi
 TORCH_CUDA_ARCH_LIST="9.0" python setup.py bdist_wheel
 uv pip install dist/*.whl --force-reinstall
 popd # deep_ep_sbo
+
+# build deep_gemm_sbo
+pushd deep_gemm_sbo
+rm -rf build dist
+rm -rf *.egg-info
+python setup.py bdist_wheel
+uv pip install dist/*.whl --force-reinstall
+popd # deep_gemm_sbo
 
 popd # third_party
