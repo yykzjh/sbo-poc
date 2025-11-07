@@ -1,0 +1,8 @@
+[submodule "third_party/deep_ep_sbo"]
+	path = third_party/deep_ep_sbo
+	url = git@github.com:Zqy11/DeepEP.git
+	branch = feat/overlap
+[submodule "third_party/deep_gemm_sbo"]
+	path = third_party/deep_gemm_sbo
+	url = git@github.com:Sulfur6/DeepGEMM.git
+	branch = sbo.v2.public
