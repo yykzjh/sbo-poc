@@ -6,3 +6,7 @@
 	path = third_party/deep_gemm_sbo
 	url = git@github.com:Sulfur6/DeepGEMM.git
 	branch = sbo.v2.public
+[submodule "third_party/nvshmem"]
+	path = third_party/nvshmem
+	url = git@gitlab.alibaba-inc.com:yp440239/nvshmem.git
+	branch = master
