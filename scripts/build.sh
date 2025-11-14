@@ -1,5 +1,6 @@
 # install dependencies
 uv sync
+source ./.venv/bin/activate
 
 pushd third_party
 
